@@ -31,6 +31,18 @@
         </div>
     </nav>
 
+    <div class="mobile-menu">
+        <a href="#">Products</a>
+        <a href="#">Solutions</a>
+        <a href="#">Enterprise</a>
+        <a href="#">Pricing</a> 
+        <a href="#">Contact Sales</a> 
+        <a href="#">Get app</a> 
+        <div>
+            <button>Get started</button>
+        </div>
+    </div>
+
     <main>
         <section class="hero">
             <div class="left">
@@ -428,6 +440,23 @@
             </a>
         </span>
     </footer>
+
+
+    <script>
+        const menuBtn = document.querySelector(".menu");
+        const mobileMenu = document.querySelector(".mobile-menu");
+
+        menuBtn.addEventListener("click", ()=>{
+            mobileMenu.classList.toggle("active");
+
+            if(mobileMenu.classList.contains("active")){
+                menuBtn.innerHTML = "&times;";
+            }
+            else{
+                menuBtn.innerHTML = "&#9776;";
+            }
+        });
+    </script>
 </body>
 
 </html>
